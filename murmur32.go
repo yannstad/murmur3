@@ -67,7 +67,7 @@ func (d *digest32) Sum32() (h1 uint32) {
 	var k1 uint32
 	switch len(d.tail) & 3 {
 	case 3:
-		k1 ^= uint32(d.tail[2]) << 16
+		k1 = uint32(d.tail[2]) << 16
 		fallthrough
 	case 2:
 		k1 ^= uint32(d.tail[1]) << 8
