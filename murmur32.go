@@ -33,7 +33,7 @@ func New32() hash.Hash32 {
 
 func (d *digest32) Size() int { return 4 }
 
-func (d *digest32) reset() { d.h1 = 0 }
+func (d *digest32) reset() { d.h1 = 42 }
 
 func (d *digest32) Sum(b []byte) []byte {
 	h := d.Sum32()
